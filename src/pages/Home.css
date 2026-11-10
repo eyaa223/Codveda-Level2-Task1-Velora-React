@@ -1,0 +1,406 @@
+
+/* =========================
+   VELORA HOME PAGE
+========================= */
+
+.home {
+  background: #f8f6f2;
+  overflow: hidden;
+}
+
+/* HERO */
+
+.home-hero {
+  position: relative;
+  min-height: 780px;
+  height: 88vh;
+  max-height: 1000px;
+  display: flex;
+  align-items: center;
+  color: white;
+  background: #38332f;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.62) 0%,
+    rgba(0, 0, 0, 0.28) 55%,
+    rgba(0, 0, 0, 0.08) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.hero-label,
+.hero-bottom-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(50px, 7vw, 108px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+  font-weight: 400;
+  margin: 28px 0;
+}
+
+.hero-content p {
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #f0eeeb;
+  margin-bottom: 40px;
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+  padding: 18px 25px;
+  background: white;
+  color: #24211f;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.hero-button:hover {
+  background: #e8ded3;
+  transform: translateY(-3px);
+}
+
+.hero-bottom-label {
+  position: absolute;
+  bottom: 35px;
+  left: 60px;
+  z-index: 1;
+}
+
+/* INTRO */
+
+.home-intro {
+  text-align: center;
+  padding: 130px 24px;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.home-intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 5vw, 70px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 30px 0;
+}
+
+.home-intro h2 em {
+  font-weight: 400;
+  color: #8d7c6c;
+}
+
+.home-intro p {
+  max-width: 480px;
+  margin: 0 auto;
+  color: #716b65;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* COLLECTIONS */
+
+.collections-section {
+  max-width: 1400px;
+  margin: auto;
+  padding: 30px 45px 130px;
+}
+
+.collections-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 45px;
+}
+
+.collections-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: clamp(32px, 4vw, 56px);
+  margin: 15px 0 0;
+}
+
+.collection-season {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #888079;
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.collection-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background: #e5e0d9;
+}
+
+.collection-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.collection-card:hover img {
+  transform: scale(1.07);
+}
+
+.collection-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.22);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.collection-overlay span {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.collection-card:hover .collection-overlay {
+  opacity: 1;
+}
+
+.collection-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 22px;
+}
+
+.collection-info h3 {
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.collection-info p {
+  font-size: 13px;
+  color: #817970;
+  margin: 0;
+}
+
+.collection-arrow {
+  font-size: 24px;
+}
+
+/* BRAND */
+
+.brand-section {
+  background: #252320;
+  color: #fff;
+  padding: 130px 30px;
+  text-align: center;
+}
+
+.brand-content {
+  max-width: 780px;
+  margin: auto;
+}
+
+.brand-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 5vw, 72px);
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 30px 0;
+}
+
+.brand-content p {
+  max-width: 560px;
+  margin: 0 auto 35px;
+  line-height: 2;
+  font-size: 15px;
+  color: #bdb7b0;
+}
+
+.brand-link {
+  display: inline-flex;
+  gap: 25px;
+  align-items: center;
+  border-bottom: 1px solid white;
+  padding-bottom: 12px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+/* ENDING */
+
+.home-ending {
+  text-align: center;
+  padding: 110px 20px;
+}
+
+.home-ending span {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(55px, 10vw, 140px);
+  letter-spacing: 10px;
+}
+
+.home-ending p {
+  font-size: 11px;
+  letter-spacing: 4px;
+  margin-top: 10px;
+}
+
+/* SCROLL ANIMATIONS */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .home-hero {
+    min-height: 650px;
+  }
+
+  .hero-content {
+    padding: 0 35px;
+  }
+
+  .hero-bottom-label {
+    left: 35px;
+  }
+
+  .collections-section {
+    padding: 30px 25px 100px;
+  }
+
+  .collections-grid {
+    gap: 14px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .home-hero {
+    min-height: 620px;
+    height: 80svh;
+  }
+
+  .hero-content {
+    padding: 0 24px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(43px, 11vw, 65px);
+  }
+
+  .hero-content p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .hero-bottom-label {
+    left: 24px;
+    bottom: 25px;
+    font-size: 9px;
+  }
+
+  .home-intro {
+    padding: 90px 20px;
+  }
+
+  .collections-section {
+    padding: 20px 18px 90px;
+  }
+
+  .collections-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .collections-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .collection-image-wrapper {
+    aspect-ratio: 4 / 5;
+  }
+
+  .brand-section {
+    padding: 90px 22px;
+  }
+
+  .home-ending {
+    padding: 75px 15px;
+  }
+
+  .home-ending span {
+    letter-spacing: 5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .collection-image-wrapper img,
+  .hero-button {
+    transition: none;
+  }
+}
